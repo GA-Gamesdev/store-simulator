@@ -35,7 +35,7 @@ text-align: center;
 .ui-button:hover{
   background-color: #6c6c6c;
   color:white;
-  padding: 15px 120px;
+
   font-family:Fredoka ;
   font-size: 30px;
 
@@ -45,9 +45,40 @@ text-align: center;
 .ui-button:active{
   background-color: #272727;
   color:white;
-  padding: 15px 120px;
+
   font-family:Fredoka ;
   font-size: 21px;
+
+  transition-duration: 0.3s;
+}
+
+.ui-button-small{
+  background-color: #4a4a4a;
+  color:white;
+  padding: 5px 40px;
+  font-family:Fredoka ;
+  font-size:15px;
+  border-radius: 13px;
+
+    transition-duration: 0.3s;
+}
+
+.ui-button-small:hover{
+  background-color: #6c6c6c;
+  color:white;
+
+  font-family:Fredoka ;
+  font-size: 19px;
+
+  transition-duration: 0.3s;
+}
+
+.ui-button-small:active{
+  background-color: #272727;
+  color:white;
+
+  font-family:Fredoka ;
+  font-size: 10px;
 
   transition-duration: 0.3s;
 }
@@ -59,6 +90,24 @@ text-align: center;
 .save-ui{
   display: none;
   
+}
+
+.savebox{
+border-radius: 20px;
+background-color: #4a4a4a;
+    display: inline-block; /* shrinks to content size */
+   
+    padding-top: 20px;
+    padding-bottom: 30px;
+    min-height: 250px;
+    min-width: 400px;
+    max-width: 400px;
+    max-height: 450px;
+}
+
+.sep1{
+
+    padding: 10px; 
 }
 </style>
 
@@ -74,7 +123,21 @@ text-align: center;
           <div class="save-ui">
             <div class="savecontent">
             <h1 style="font-family: Fredoka; font-size: 50px; color:#4a4a4a">my saves</h1>
+            <div class="savebox">
+              <button class="ui-button">save file 1</button>
+              <div class="sep1"></div>
+                <button class="ui-button">save file 2</button>
+                      <div class="sep1"></div>
+                  <button class="ui-button">save file 3</button>
+                    <div class="sep1"></div>
+                          <button id="back1" class="ui-button-small">exit menu</button>
+                          <button class="ui-button-small">achevements</button>
             </div>
+            </div>
+          </div>
+
+          <div class>
+
           </div>
   </body>
 </html>
@@ -83,5 +146,11 @@ const hi = document.getElementById("play")
 hi.addEventListener("click",()=>{
  document.querySelector(".title-ui").style.display = "none" 
   document.querySelector(".save-ui").style.display = "block" 
+})
+
+const bk1 = document.getElementById("back1")
+bk1.addEventListener("click",()=>{
+ document.querySelector(".title-ui").style.display = "block" 
+  document.querySelector(".save-ui").style.display = "none" 
 })
 </script>
