@@ -1,2 +1,185 @@
-<title>APRIL 30TH 2026</title>
-april 30th 2026 4:29pm est
+<!DOCTYPE html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@460&display=swap" rel="stylesheet">
+</head>
+
+<style>
+.titlecontent{
+padding-top: 200px;
+text-align: center;
+}
+
+.savecontent{
+padding-top: 200px;
+text-align: center;
+}
+
+.versiontxt{
+    position: fixed; /* Positions relative to the browser window (viewport) */
+  bottom: 0px; /* Aligns 20px from the bottom edge */
+  left: 20px; 
+}
+.ui-button{
+  background-color: #4a4a4a;
+  color:white;
+  padding: 15px 120px;
+  font-family:Fredoka ;
+  font-size:25px;
+  border-radius: 20px;
+
+    transition-duration: 0.3s;
+}
+
+.ui-button:hover{
+  background-color: #6c6c6c;
+  color:white;
+
+  font-family:Fredoka ;
+  font-size: 30px;
+
+  transition-duration: 0.3s;
+}
+
+.ui-button:active{
+  background-color: #272727;
+  color:white;
+
+  font-family:Fredoka ;
+  font-size: 21px;
+
+  transition-duration: 0.3s;
+}
+
+.ui-button-small{
+  background-color: #4a4a4a;
+  color:white;
+  padding: 5px 40px;
+  font-family:Fredoka ;
+  font-size:15px;
+  border-radius: 13px;
+
+    transition-duration: 0.3s;
+}
+
+.ui-button-small:hover{
+  background-color: #6c6c6c;
+  color:white;
+
+  font-family:Fredoka ;
+  font-size: 19px;
+
+  transition-duration: 0.3s;
+}
+
+.ui-button-small:active{
+  background-color: #272727;
+  color:white;
+
+  font-family:Fredoka ;
+  font-size: 10px;
+
+  transition-duration: 0.3s;
+}
+
+.sidebar{
+  height: 100vh;
+  width: 400px;
+  background-color: #272727;
+    flex-direction: column;
+    align-items: center;
+  text-align:  center;
+  padding-top:20px ;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.title-ui{
+  display: block;
+  
+}
+.save-ui{
+  display: none;
+  
+}
+.game-ui{
+  display: none;
+  
+}
+
+.savebox{
+border-radius: 20px;
+background-color: #4a4a4a;
+    display: inline-block; /* shrinks to content size */
+   
+    padding-top: 20px;
+    padding-bottom: 30px;
+    min-height: 250px;
+    min-width: 400px;
+    max-width: 400px;
+    max-height: 450px;
+}
+
+.sep1{
+
+    padding: 10px; 
+}
+</style>
+
+<html>
+  <body>
+    <div class="title-ui">
+    <div class="titlecontent">
+      <h1 style="font-family: Fredoka; font-size: 60px; color:#4a4a4a">store simulator</h1>
+      <button class="ui-button" id="play">play</button>
+    </div>
+    </div>
+          <h1 class="versiontxt" style="font-family: Fredoka; font-size: 20px; color:#959595">G.A Games, Store Simulator v0.0.6</h1>
+          <div class="save-ui">
+            <div class="savecontent">
+            <h1 style="font-family: Fredoka; font-size: 50px; color:#4a4a4a">my saves</h1>
+            <div class="savebox">
+              <button id="savebut1" class="ui-button">save file 1</button>
+              <div class="sep1"></div>
+                <button class="ui-button">save file 2</button>
+                      <div class="sep1"></div>
+                  <button class="ui-button">save file 3</button>
+                    <div class="sep1"></div>
+                          <button id="back1" class="ui-button-small">exit menu</button>
+                          <button class="ui-button-small">achevements</button>
+            </div>
+            </div>
+          </div>
+
+          <div class="game-ui">
+            <div class="sidebar">
+              <button class="ui-button">hi there!</button>
+            </div>
+          </div>
+  </body>
+</html>
+<script>
+const hi = document.getElementById("play")
+hi.addEventListener("click",()=>{
+ document.querySelector(".title-ui").style.display = "none" 
+  document.querySelector(".save-ui").style.display = "block" 
+})
+
+const bk1 = document.getElementById("back1")
+bk1.addEventListener("click",()=>{
+ document.querySelector(".title-ui").style.display = "block" 
+  document.querySelector(".save-ui").style.display = "none" 
+})
+
+const sv1 = document.getElementById("savebut1")
+sv1.addEventListener("click",()=>{
+ document.querySelector(".title-ui").style.display = "none" 
+  document.querySelector(".save-ui").style.display = "none" 
+  document.querySelector(".game-ui").style.display = "block"
+})
+</script>
